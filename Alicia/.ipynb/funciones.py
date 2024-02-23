@@ -11,7 +11,7 @@ def colocar_barco(barco, tablero):
         tablero[casilla] = "O"
     return tablero
 
-def crear_barco(eslora, tablero, contador):    
+def crear_barco(eslora, tablero, contador, lista_barcos):    
     # elegimos aleatoriamente el punto de partida desde el que se colocará nuestro barco
     fila_a = random.randint(0,9)
     columna_a = random.randint(0,9)
@@ -61,7 +61,7 @@ def crear_barco(eslora, tablero, contador):
             if tablero[casilla] != "O":
                 contador +=1
                 if contador == eslora:
-                    # barcos.append(barco)
+                    lista_barcos = lista_barcos.append(barco)
                     tablero = colocar_barco(barco, tablero)
 
                     break
