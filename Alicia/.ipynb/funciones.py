@@ -57,7 +57,6 @@ def crear_barco(eslora, tablero, contador):
                     continue
         barco.append((fila_inicio, columna_inicio))
     else:
-        contador = 0
         for casilla in barco:
             if tablero[casilla] != "O":
                 contador +=1
@@ -70,3 +69,7 @@ def crear_barco(eslora, tablero, contador):
                 # print('Creando nuevo barco')
                 crear_barco(eslora, tablero, contador)
                 break
+
+def ocultar_tablero(tablero):
+    tablero[::,::] = '·'
+    return tablero
