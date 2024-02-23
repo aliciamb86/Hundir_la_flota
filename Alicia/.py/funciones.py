@@ -21,6 +21,7 @@ def crear_barco(eslora, tablero, contador):
     fila_inicio = fila_a
     columna_inicio = columna_a
     barco = [(fila_inicio, columna_inicio)]
+    contador = 0
 
     # elegimos aleatoriamente la dirección en la que se posicionará nuestro barco
     orientacion = random.choice(["S","O","E","N"])
@@ -57,7 +58,6 @@ def crear_barco(eslora, tablero, contador):
                     continue
         barco.append((fila_inicio, columna_inicio))
     else:
-        contador = 0
         for casilla in barco:
             if tablero[casilla] != "O":
                 contador +=1
