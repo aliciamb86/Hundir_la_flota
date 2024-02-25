@@ -161,7 +161,6 @@ def disparar_maquina(lista_barcos_jug, tablero_jug, lista_barcos_maq):
     t.sleep(2)
     print('Tiene', vidas(lista_barcos_maq), 'vidas')
     t.sleep(2)
-    print(tablero_jug)
     fila = random.randint(0,9)
     columna = random.randint(0,9)
     contador_fallos = 0
